@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Buyer's Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold">⚡</div>
+                <span class="font-bold text-lg text-slate-900">TechMatch</span>
+            </div>
+            <nav class="hidden sm:flex items-center space-x-6 text-sm font-medium text-slate-600">
+                <a href="#quiz" class="hover:text-indigo-600 transition">Device Quiz</a>
+                <a href="#guide" class="hover:text-indigo-600 transition">Quick Guide</a>
+                <a href="#faq" class="hover:text-indigo-600 transition">FAQ</a>
+            </nav>
+            <a href="#quiz" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-xl transition shadow-sm">Start Quiz</a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+        <section class="text-center space-y-4 max-w-2xl mx-auto pt-6">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-100">
+                ✨ Zero Jargon Shopping Assistant
+            </span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+                Confused by gadgets? Let's fix that.
+            </h1>
+            <p class="text-slate-600 text-base sm:text-lg">
+                Cut through the specs and hype. Find exactly what you need in under 30 seconds or browse our curated cheat sheet.
+            </p>
+        </section>
+
+        <section id="quiz" class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-sm max-w-3xl mx-auto">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-slate-900">⚡ Instant Device Matcher</h2>
+                <p class="text-slate-500 text-sm mt-1">Answer 3 quick questions for a tailored recommendation.</p>
+            </div>
+
+            <form id="matcherForm" class="space-y-6">
+                <!-- Question 1 -->
+                <div class="space-y-3">
+                    <label class="block text-sm font-semibold text-slate-700">1. What is your primary use case?</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <label class="quiz-option border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center cursor-pointer transition">
+                            <input type="radio" name="purpose" value="work" class="sr-only" required>
+                            <span class="text-xl mb-1">💻</span>
+                            <span class="text-sm font-medium text-slate-800">Work / Coding</span>
+                        </label>
+                        <label class="quiz-option border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center cursor-pointer transition">
+                            <input type="radio" name="purpose" value="gaming" class="sr-only">
+                            <span class="text-xl mb-1">🎮</span>
+                            <span class="text-sm font-medium text-slate-800">Gaming & Media</span>
+                        </label>
+                        <label class="quiz-option border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center cursor-pointer transition">
+                            <input type="radio" name="purpose" value="casual" class="sr-only">
+                            <span class="text-xl mb-1">☕</span>
+                            <span class="text-sm font-medium text-slate-800">Browsing / Daily</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="space-y-3">
+                    <label class="block text-sm font-semibold text-slate-700">2. What is your budget level?</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <label class="quiz-option border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center cursor-pointer transition">
+                            <input type="radio" name="budget" value="budget" class="sr-only" required>
+                            <span class="text-xl mb-1">💵</span>
+                            <span class="text-sm font-medium text-slate-800">Budget-friendly</span>
+                        </label>
+                        <label class="quiz-option border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center cursor-pointer transition">
+                            <input type="radio" name="budget" value="mid" class="sr-only">
+                            <span class="text-xl mb-1">💳</span>
+                            <span class="text-sm font-medium text-slate-800">Mid-range Value</span>
+                        </label>
+                        <label class="quiz-option border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center cursor-pointer transition">
+                            <input type="radio" name="budget" value="premium" class="sr-only">
+                            <span class="text-xl mb-1">💎</span>
+                            <span class="text-sm font-medium text-slate-800">Top-tier / No limit</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="space-y-3">
+                    <label class="block text-sm font-semibold text-slate-700">3. How important is portability?</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <label class="quiz-option border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center cursor-pointer transition">
+                            <input type="radio" name="portability" value="high" class="sr-only" required>
+                            <span class="text-xl mb-1">🎒</span>
+                            <span class="text-sm font-medium text-slate-800">Must be ultra-portable</span>
+                        </label>
+                        <label class="quiz-option border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center cursor-pointer transition">
+                            <input type="radio" name="portability" value="low" class="sr-only">
+                            <span class="text-xl mb-1">🏠</span>
+                            <span class="text-sm font-medium text-slate-800">Stays on desk mostly</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3.5 rounded-2xl transition shadow-md shadow-indigo-100">
+                    Get Smart Recommendation
+                </button>
+            </form>
+
+            <!-- Result Box -->
+            <div id="quizResult" class="hidden mt-8 p-6 bg-indigo-50/70 border border-indigo-100 rounded-2xl space-y-3">
+                <div class="flex items-center space-x-2 text-indigo-900 font-bold text-lg">
+                    <span>🎉 Your Ideal Match:</span>
+                    <span id="resultTitle" class="text-indigo-600"></span>
+                </div>
+                <p id="resultDesc" class="text-slate-600 text-sm leading-relaxed"></p>
+            </div>
+        </section>
+
+        <section id="guide" class="space-y-8">
+            <div class="text-center max-w-xl mx-auto">
+                <h2 class="text-2xl font-bold text-slate-900">Essential Gear Cheat Sheet</h2>
+                <p class="text-slate-500 text-sm mt-1">Clear verdicts on the 6 device categories that matter most.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Laptop -->
+                <div class="card bg-white rounded-3xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl">💻</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-emerald-50 text-emerald-700 rounded-full border border-emerald-100">Must-Have</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900">Laptops</h3>
+                        <p class="text-slate-500 text-xs mt-1">The core workstation for mobile productivity.</p>
+                        
+                        <div class="mt-4 space-y-2 text-xs">
+                            <div class="text-emerald-700 font-medium">✓ Pros: Ultimate mobility, powerful chips now available in thin designs.</div>
+                            <div class="text-rose-600 font-medium">✗ Cons: Expensive repairs, limited screen size compared to desktops.</div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-semibold text-slate-400 block uppercase tracking-wider">Verdict</span>
+                        <p class="text-xs font-medium text-slate-800 mt-0.5">Buy if you work on the go. Skip if you only do heavy gaming at a fixed desk.</p>
+                    </div>
+                </div>
+
+                <!-- Mouse -->
+                <div class="card bg-white rounded-3xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl">🖱️</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-emerald-50 text-emerald-700 rounded-full border border-emerald-100">High Impact</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900">Mice</h3>
+                        <p class="text-slate-500 text-xs mt-1">Ergonomic precision for daily tasks and gaming.</p>
+                        
+                        <div class="mt-4 space-y-2 text-xs">
+                            <div class="text-emerald-700 font-medium">✓ Pros: Saves wrist strain, infinite scroll options, precise navigation.</div>
+                            <div class="text-rose-600 font-medium">✗ Cons: Extra item to pack in your bag.</div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-semibold text-slate-400 block uppercase tracking-wider">Verdict</span>
+                        <p class="text-xs font-medium text-slate-800 mt-0.5">Instant buy. Trackpads are fine for emergencies, but a good mouse transforms work.</p>
+                    </div>
+                </div>
+
+                <!-- Keyboard -->
+                <div class="card bg-white rounded-3xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl">⌨️</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-blue-50 text-blue-700 rounded-full border border-blue-100">Comfort Choice</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900">Keyboards</h3>
+                        <p class="text-slate-500 text-xs mt-1">Mechanical or membrane tactile typing interfaces.</p>
+                        
+                        <div class="mt-4 space-y-2 text-xs">
+                            <div class="text-emerald-700 font-medium">✓ Pros: Incredible typing feel, customizable switches, wireless multi-device.</div>
+                            <div class="text-rose-600 font-medium">✗ Cons: Can be noisy, good ones require investment.</div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-semibold text-slate-400 block uppercase tracking-wider">Verdict</span>
+                        <p class="text-xs font-medium text-slate-800 mt-0.5">Buy if you type all day. Laptop keyboards cause hand fatigue over time.</p>
+                    </div>
+                </div>
+
+                <!-- Monitor -->
+                <div class="card bg-white rounded-3xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl">🖥️</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-emerald-50 text-emerald-700 rounded-full border border-emerald-100">Productivity Boost</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900">Monitors</h3>
+                        <p class="text-slate-500 text-xs mt-1">External displays for expansive screen estate.</p>
+                        
+                        <div class="mt-4 space-y-2 text-xs">
+                            <div class="text-emerald-700 font-medium">✓ Pros: Massive workspace, better posture alignment, vibrant panels.</div>
+                            <div class="text-rose-600 font-medium">✗ Cons: Takes up permanent desk space.</div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-semibold text-slate-400 block uppercase tracking-wider">Verdict</span>
+                        <p class="text-xs font-medium text-slate-800 mt-0.5">Essential if you work from home. One external monitor doubles your efficiency.</p>
+                    </div>
+                </div>
+
+                <!-- Smartphone -->
+                <div class="card bg-white rounded-3xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl">📱</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-emerald-50 text-emerald-700 rounded-full border border-emerald-100">Everyday Essential</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900">Smartphones</h3>
+                        <p class="text-slate-500 text-xs mt-1">Pocket communication and photography hubs.</p>
+                        
+                        <div class="mt-4 space-y-2 text-xs">
+                            <div class="text-emerald-700 font-medium">✓ Pros: Incredible cameras, pocket computing power, always connected.</div>
+                            <div class="text-rose-600 font-medium">✗ Cons: High flagship prices, rapid yearly iteration cycles.</div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-semibold text-slate-400 block uppercase tracking-wider">Verdict</span>
+                        <p class="text-xs font-medium text-slate-800 mt-0.5">Hold onto yours for 3-4 years. Mid-tier phones now offer 90% of flagship performance.</p>
+                    </div>
+                </div>
+
+                <!-- Speakers -->
+                <div class="card bg-white rounded-3xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl">🔊</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-blue-50 text-blue-700 rounded-full border border-blue-100">Audio Upgrade</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900">Speakers</h3>
+                        <p class="text-slate-500 text-xs mt-1">Immersive sound systems and portable audio.</p>
+                        
+                        <div class="mt-4 space-y-2 text-xs">
+                            <div class="text-emerald-700 font-medium">✓ Pros: Rich bass, room-filling sound, great for calls and music.</div>
+                            <div class="text-rose-600 font-medium">✗ Cons: Desktop speakers require cable management.</div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-semibold text-slate-400 block uppercase tracking-wider">Verdict</span>
+                        <p class="text-xs font-medium text-slate-800 mt-0.5">Buy if you hate wearing headphones all day. Major upgrade over built-in laptop audio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-sm max-w-3xl mx-auto space-y-6">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold text-slate-900">Frequently Asked Questions</h2>
+                <p class="text-slate-500 text-sm mt-1">Quick answers to common tech buying dilemmas.</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="faq-card border border-slate-100 bg-slate-50/50 rounded-2xl p-4">
+                    <h3 class="font-semibold text-sm text-slate-900">How much RAM do I actually need?</h3>
+                    <p class="text-slate-600 text-xs mt-1">For general office work and browsing, 16GB is the sweet spot. If you do video editing or heavy coding, opt for 32GB.</p>
+                </div>
+                <div class="faq-card border border-slate-100 bg-slate-50/50 rounded-2xl p-4">
+                    <h3 class="font-semibold text-sm text-slate-900">Should I buy extended warranties on electronics?</h3>
+                    <p class="text-slate-600 text-xs mt-1">Usually no. Manufacturer warranties cover initial defects, and many credit cards automatically double warranty duration.</p>
+                </div>
+                <div class="faq-card border border-slate-100 bg-slate-50/50 rounded-2xl p-4">
+                    <h3 class="font-semibold text-sm text-slate-900">When is the best time of year to buy tech?</h3>
+                    <p class="text-slate-600 text-xs mt-1">Major sales events like Black Friday in November or back-to-school season in late summer offer the steepest discounts.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-20 border-t border-slate-200 bg-white py-8 text-center text-xs text-slate-500">
+        <p>TechMatch Buyer's Guide • Designed for clarity and zero buyer's remorse.</p>
+    </footer>
+
+    <script>
+        document.getElementById('matcherForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const purpose = document.querySelector('input[name="purpose"]:checked').value;
+            const budget = document.querySelector('input[name="budget"]:checked').value;
+            const portability = document.querySelector('input[name="portability"]:checked').value;
+
+            let recommendation = "";
+            let description = "";
+
+            if (purpose === 'work' && portability === 'high') {
+                recommendation = "A Lightweight Ultrabook + Compact Wireless Mouse";
+                description = "You need seamless mobility without heavy lifting. Get a 13-14 inch modern laptop with strong battery life paired with a silent Bluetooth mouse for remote productivity.";
+            } else if (purpose === 'work' && portability === 'low') {
+                recommendation = "A 27-inch Monitor + Mechanical Keyboard + Ergonomic Mouse";
+                description = "Since your setup stays stationary, invest in ergonomic desktop gear. Your posture and daily typing speed will thank you.";
+            } else if (purpose === 'gaming') {
+                recommendation = "Mid-to-High Gaming Laptop or Dedicated Desktop + High-Refresh Monitor";
+                description = "Gaming requires robust graphics horsepower and responsive peripherals. Look for dedicated GPU options and at least a 120Hz display.";
+            } else {
+                recommendation = "Reliable Mid-Range Laptop + Everyday Smartphone";
+                description = "You value balanced everyday performance without overpaying for niche specs. Stick to trusted mainstream brands with solid warranties.";
+            }
+
+            document.getElementById('resultTitle').textContent = recommendation;
+            document.getElementById('resultDesc').textContent = description;
+            document.getElementById('quizResult').classList.remove('hidden');
+            document.getElementById('quizResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    </script>
+</body>
+</html>
